@@ -1,18 +1,17 @@
 ---
-title: "Code Example"
+title: "نمونه کد"
 date: "2019-06-06"
 draft: false
 path: "/blog/code-example"
 ---
 
-## An Code example with PrismJS
-Gatsby-Starter-Julia uses the Atom Editor Theme.
+این یک نوشته تستی ‌می‌باشد. در این نوشته از قسمت‌های کد استفاده می‌شود.
 
 ```js
 console.log("Hello World");
 ```
 
-## Default NodeJS server
+# یک هدر و بخش جدید
 
 ```js
 const http = require('http');
