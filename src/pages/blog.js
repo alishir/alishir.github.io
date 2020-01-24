@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
+import { toJalaali } from "jalaali-js"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -9,25 +10,41 @@ import SEO from "../components/seo"
 const Content = styled.div`
   margin: 0 auto;
   direction: rtl;
-  font-family: Noto Naskh Arabic;
+  font-family: Vazir;
   max-width: 860px;
   padding: 1.45rem 1.0875rem;
 `
 
+
 const ArticleDate = styled.h5`
   display: inline;
+  direction: rtl;
   color: #606060;
 `
+
+const JalaaliDate = ({date}) => {
+	const ds = date.split('-');
+	const jdate = toJalaali(Number(ds[0]), Number(ds[1]), Number(ds[2]));
+	const year = jdate.jy.toLocaleString('fa-IR', {useGrouping: false});
+	const month = jdate.jm.toLocaleString('fa-IR', {useGrouping: false});
+	const day = jdate.jd.toLocaleString('fa-IR', {useGrouping: false});
+	return <ArticleDate>
+		{year}/{month}/{day}
+	</ArticleDate>
+}
 
 const MarkerHeader = styled.h3`
   display: inline;
   border-radius: 1em 0 1em 0;
+/*
   background-image: linear-gradient(
+
     -100deg,
     rgba(255, 250, 150, 0.15),
     rgba(255, 250, 150, 0.8) 100%,
     rgba(255, 250, 150, 0.25)
   );
+*/
 `
 
 const ReadingTime = styled.h5`
@@ -35,46 +52,56 @@ const ReadingTime = styled.h5`
   color: #606060;
 `
 
+const RequiredTime = ({minutes}) => {
+  const roundedMin = Math.ceil(minutes).toLocaleString('fa-IR');
+    return <ReadingTime> 
+    <span> ~ </span>
+    {roundedMin}
+    <span> </span>
+    دقیقه
+    </ReadingTime>
+}
+
 const IndexPage = ({ data }) => {
-  return (
-    <Layout>
-      <SEO title="Blog" />
-      <Content>
-        <h1>نوشته‌ها</h1>
-        {data.allMarkdownRemark.edges
-          .filter(({ node }) => {
-            const rawDate = node.frontmatter.rawDate
-            const date = new Date(rawDate)
-            return date < new Date()
-          })
-          .map(({ node }) => (
-            <div key={node.id}>
-              <Link
-                to={node.frontmatter.path}
-                css={css`
-                  text-decoration: none;
-                  color: inherit;
-                `}
-              >
-                <MarkerHeader>{node.frontmatter.title} </MarkerHeader>
-                <div>
-                  <ArticleDate>{node.frontmatter.date}</ArticleDate>
-                  <ReadingTime> - {node.fields.readingTime.text}</ReadingTime>
-                </div>
-                <p>{node.excerpt}</p>
-              </Link>
-            </div>
-          ))}
-      </Content>
-    </Layout>
-  )
+	return (
+			<Layout>
+			<SEO title="Blog" />
+			<Content>
+			<h1>نوشته‌ها</h1>
+			{data.allMarkdownRemark.edges
+			 .filter(({ node }) => {
+				 const rawDate = node.frontmatter.rawDate
+				 const date = new Date(rawDate)
+				 return date < new Date()
+			 })
+			 .map(({ node }) => (
+					 <div key={node.id}>
+					 <Link
+				 to={node.frontmatter.path}
+				 css={css`
+									text-decoration: none;
+									color: inherit;
+								`}
+					 >
+					 <MarkerHeader>{node.frontmatter.title} </MarkerHeader>
+					 <div>
+					   <JalaaliDate date={node.frontmatter.rawDate}/>
+					   <RequiredTime minutes={node.fields.readingTime.minutes}/>
+					 </div>
+					 <p>{node.excerpt}</p>
+					 </Link>
+					 </div>
+			 ))}
+		</Content>
+			</Layout>
+	)
 }
 
 export default IndexPage
 
 export const query = graphql`
-  query {
-    site {
+	query {
+		site {
       siteMetadata {
         title
       }
@@ -97,6 +124,7 @@ export const query = graphql`
             slug
             readingTime {
               text
+              minutes
             }
           }
           excerpt
