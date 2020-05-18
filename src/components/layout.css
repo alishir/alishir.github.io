@@ -186,7 +186,7 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
+    /* font: 112.5%/1.45em georgia, serif; */
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -528,8 +528,8 @@ li > p {
   margin-bottom: calc(1.45rem / 2);
 }
 code {
-  font-size: 0.8rem;
-  line-height: 1.45rem;
+  font-size: 1.1rem;
+  line-height: 1.2rem;
 }
 kbd {
   font-size: 0.8rem;
@@ -611,7 +611,7 @@ pre tt:after {
 
 .gatsby-highlight pre[class*="language-"].line-numbers {
   padding: 0;
-  padding-left: 2.8em;
+  padding-left: 1em;
   overflow: initial;
 }
 @media only screen and (max-width: 480px) {

@@ -16,6 +16,7 @@ const Content = styled.div`
 const MarkedHeader = styled.h1`
   display: inline;
   border-radius: 1em 0 1em 0;
+  font-size: 1.5em;
 /*
   background-image: linear-gradient(
     -100deg,
@@ -29,20 +30,21 @@ const MarkedHeader = styled.h1`
 const HeaderDate = styled.h4`
   margin-top: 10px;
   color: #606060;
+  font-size: .8em;
 `
 
 // STYLE THE TAGS INSIDE THE MARKDOWN HERE
 const MarkdownContent = styled.div`
+  p {
+    font-size: 1.1em;
+  }
+  h2 {
+    font-size: 1.1em;
+    margin-bottom: 0.5rem;
+  }
   a {
-    text-decoration: none;
+    /*text-decoration: none;*/
     position: relative;
-
-/*
-    background-image: linear-gradient(
-      rgba(255, 250, 150, 0.8),
-      rgba(255, 250, 150, 0.8)
-    );
-*/
     background-repeat: no-repeat;
     background-size: 100% 0.2em;
     background-position: 0 88%;
@@ -51,28 +53,35 @@ const MarkdownContent = styled.div`
       background-size: 100% 88%;
     }
   }
+  .gatsby-highlight {
+    padding: 0.4em;
+  }
+  .code {
+    font-family: "SauceCodePro Nerd Font Mono";
+    font-size: 1.5em;
+  }
 `
 
 const RequiredTime = ({minutes}) => {
   const roundedMin = Math.ceil(minutes).toLocaleString('fa-IR');
-    return <span> 
+  return <span> 
     <span> ~ </span>
     {roundedMin}
     <span> </span>
     دقیقه
-    </span>
+  </span>
 }
 
 
 const JalaaliDate = ({date}) => {
-	const ds = date.split('-');
-	const jdate = toJalaali(Number(ds[0]), Number(ds[1]), Number(ds[2]));
-	const year = jdate.jy.toLocaleString('fa-IR', {useGrouping: false});
-	const month = jdate.jm.toLocaleString('fa-IR', {useGrouping: false});
-	const day = jdate.jd.toLocaleString('fa-IR', {useGrouping: false});
-	return <span>
-		{year}/{month}/{day}
-	</span>
+  const ds = date.split('-');
+  const jdate = toJalaali(Number(ds[0]), Number(ds[1]), Number(ds[2]));
+  const year = jdate.jy.toLocaleString('fa-IR', {useGrouping: false});
+  const month = jdate.jm.toLocaleString('fa-IR', {useGrouping: false});
+  const day = jdate.jd.toLocaleString('fa-IR', {useGrouping: false});
+  return <span>
+    {year}/{month}/{day}
+  </span>
 }
 
 export default ({ data }) => {
