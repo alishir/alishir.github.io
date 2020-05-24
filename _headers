@@ -39,6 +39,15 @@
   Link: </component---src-templates-blog-post-js-f45ba64cf7d4211db29d.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/blog/npm-error-unexpected-end-of-json/page-data.json>; rel=preload; as=fetch; crossorigin
+/blog/go-vendoring
+  Link: </webpack-runtime-3d28d68e1b0776317619.js>; rel=preload; as=script
+  Link: </styles-8636a280cbc61d53ad10.js>; rel=preload; as=script
+  Link: </framework-5dd3c501fd049989ea3a.js>; rel=preload; as=script
+  Link: </app-b51c1524d93c8800a1e6.js>; rel=preload; as=script
+  Link: </commons-ce4493b6a8c7c41f96e8.js>; rel=preload; as=script
+  Link: </component---src-templates-blog-post-js-f45ba64cf7d4211db29d.js>; rel=preload; as=script
+  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </page-data/blog/go-vendoring/page-data.json>; rel=preload; as=fetch; crossorigin
 /blog/tor-resolve
   Link: </webpack-runtime-3d28d68e1b0776317619.js>; rel=preload; as=script
   Link: </styles-8636a280cbc61d53ad10.js>; rel=preload; as=script
