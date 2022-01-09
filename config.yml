@@ -1,3 +1,80 @@
 baseURL: http://example.org/
 languageCode: en-us
-title: My New Hugo Site
+title: Some Notes
+theme: "PaperMod"
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    menu:
+      main:
+        - name: Archive
+          url: archives
+          weight: 5
+        - name: Search
+          url: search/
+          weight: 10
+        - name: Tags
+          url: tags/
+          weight: 10
+        - name: Categories
+          url: categories/
+          weight: 10
+  fa:
+    languagedirection: rtl
+    weight: 3
+    title: "خورده نوشته‌ها"
+    homeInfoParams:
+      Title: "خورده نوشته‌ها"
+      Content: "سلام تست"
+    menu:
+      main:
+        - name: دسته‌ها
+          url: tags
+          weight: 10
+
+  
+params:
+  env: production
+  ShowReadingTime: true
+  ShowToc: true
+  ShowBreadCrumbs: true
+  profileMode:
+    enabled: true
+    title: "Ali Shirvani" # optional default will be site title
+    subtitle: ""
+    imageUrl: "" # optional
+    imageTitle: "" # optional
+    imageWidth: 120 # custom size
+    imageHeight: 120 # custom size
+    buttons:
+      - name: Archive
+        url: "/archive"
+      - name: Github
+        url: "https://github.com/alishir"
+
+    socialIcons: # optional
+      - name: "github"
+        url: "https://github.com"
+      - name: "<platform 2>"
+        url: "<link2>"
+  
+menu:
+  main:
+    - identifier: categories
+      name: categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 20
+    - identifier: example
+      name: example.org
+      url: https://example.org
+      weight: 30
