@@ -1,6 +1,6 @@
 baseURL: http://example.org/
 languageCode: en-us
-title: Some Notes
+title: "Brief Notes"
 theme: "PaperMod"
 
 minify:
@@ -26,16 +26,30 @@ languages:
           url: categories/
           weight: 10
   fa:
+    languageName: "Persian"
     languagedirection: rtl
-    weight: 3
-    title: "خورده نوشته‌ها"
-    homeInfoParams:
-      Title: "خورده نوشته‌ها"
-      Content: "سلام تست"
+    weight: 2
+    title: "نُکَتْ"
+    profileMode:
+      enabled: true
+      title: "علی شیروانی" # optional default will be site title
+      subtitle: ""
+      imageUrl: "" # optional
+      imageTitle: "" # optional
+      imageWidth: 120 # custom size
+      imageHeight: 120 # custom size
+      buttons:
+        - name: "آرشیو"
+          url: "/archive"
+        - name: "برچسب‌ها"
+          url: "/tags"
     menu:
       main:
-        - name: دسته‌ها
+        - name: برچسب‌ها
           url: tags
+          weight: 20
+        - name: دسته‌ها
+          url: categories/
           weight: 10
 
   
@@ -55,14 +69,16 @@ params:
     buttons:
       - name: Archive
         url: "/archive"
-      - name: Github
-        url: "https://github.com/alishir"
+      - name: Tags
+        url: "/tags"
 
-    socialIcons: # optional
-      - name: "github"
-        url: "https://github.com"
-      - name: "<platform 2>"
-        url: "<link2>"
+  socialIcons: # optional
+    - name: "github"
+      url: "https://github.com/alishir"
+    - name: "twitter"
+      url: "https://twitter.com/alishirv"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/ali-shirvani-37a031191/"
   
 menu:
   main:
@@ -74,7 +90,3 @@ menu:
       name: tags
       url: /tags/
       weight: 20
-    - identifier: example
-      name: example.org
-      url: https://example.org
-      weight: 30
