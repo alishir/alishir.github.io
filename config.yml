@@ -1,4 +1,4 @@
-baseURL: http://example.org/
+baseURL: https://alishir.github.io/
 languageCode: en-us
 title: "Brief Notes"
 theme: "PaperMod"
@@ -10,24 +10,20 @@ minify:
 languages:
   en:
     languageName: "English"
+    contentDir: content/en
     weight: 1
     menu:
       main:
-        - name: Archive
-          url: archives
-          weight: 5
-        - name: Search
-          url: search/
-          weight: 10
         - name: Tags
-          url: tags/
+          url: "tags"
           weight: 10
-        - name: Categories
-          url: categories/
-          weight: 10
+        - name: Posts
+          url: "post"
+          weight: 5
   fa:
     languageName: "Persian"
     languagedirection: rtl
+    contentDir: content/fa
     weight: 2
     title: "نُکَتْ"
     profileMode:
@@ -39,23 +35,24 @@ languages:
       imageWidth: 120 # custom size
       imageHeight: 120 # custom size
       buttons:
-        - name: "آرشیو"
-          url: "/archive"
+        - name: "نوشته‌ها"
+          url: "post"
         - name: "برچسب‌ها"
-          url: "/tags"
+          url: "tags"
     menu:
       main:
+        - name: نوشته‌ها
+          url: "post"
+          weight: 10        
         - name: برچسب‌ها
-          url: tags
+          url: "tags"
           weight: 20
-        - name: دسته‌ها
-          url: categories/
-          weight: 10
 
   
 params:
   env: production
   ShowReadingTime: true
+  enableMissingTranslationPlaceholders: false
   ShowToc: true
   ShowBreadCrumbs: true
   profileMode:
@@ -67,10 +64,10 @@ params:
     imageWidth: 120 # custom size
     imageHeight: 120 # custom size
     buttons:
-      - name: Archive
-        url: "/archive"
+      - name: Posts
+        url: "post"
       - name: Tags
-        url: "/tags"
+        url: "tags"
 
   socialIcons: # optional
     - name: "github"
@@ -82,11 +79,11 @@ params:
   
 menu:
   main:
-    - identifier: categories
-      name: categories
-      url: /categories/
+    - identifier: posts
+      name: posts
+      url: "posts"
       weight: 10
     - identifier: tags
       name: tags
-      url: /tags/
+      url: "tags"
       weight: 20
