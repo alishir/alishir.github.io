@@ -76,7 +76,7 @@ params:
       url: "https://twitter.com/alishirv"
     - name: "linkedin"
       url: "https://www.linkedin.com/in/ali-shirvani-37a031191/"
-  
+     
 menu:
   main:
     - identifier: posts
