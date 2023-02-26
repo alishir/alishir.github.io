@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Plutus on نُکَتْ</title>
+    <link>https://alishir.github.io/fa/tags/plutus/</link>
+    <description>Recent content in Plutus on نُکَتْ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://alishir.github.io/fa/tags/plutus/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>مراحل نصب Plutus Playground</title>
+      <link>https://alishir.github.io/fa/post/plutus-installation-guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://alishir.github.io/fa/post/plutus-installation-guide/</guid>
+      <description>مقدمه حتما عبارت «زنجیره بلوک» را شنیده‌اید، تکنولوژی زنجیره بلوک شامل چند نسل است. نسل اول از این تکنولوژی تنها قادر به پشتیبانی از رمز‌ارزها است، اما نسل‌های بعدی تکنولوژی زنجیره بلوک از قراردادهای هوشمند نیز پیشتیبانی می‌کند.
+اما منظور از قرارداد هوشمند چیست و چه چیزی سبب می‌شود که به این نوع قراردادها، قرارداد هوشمند بگوئیم؟
+در قراردادهای عادی، برای ثبت و اجرای قرارداد نیاز به حضور شخصی غیر از طرفین قرارداد هستیم.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>org-mode on نُکَتْ</title>
+    <link>https://alishir.github.io/fa/tags/org-mode/</link>
+    <description>Recent content in org-mode on نُکَتْ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://alishir.github.io/fa/tags/org-mode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ارجاع درون متنی در org-mode</title>
+      <link>https://alishir.github.io/fa/post/orgmode-internal-links/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://alishir.github.io/fa/post/orgmode-internal-links/</guid>
+      <description>گاهی اوقات نیاز است در یک سند مبتنی بر org-mode ارجاع به یک قسمت دیگر از سند داشته باشیم. فرض کنید خلاصه جلسات درسی را در یک سند جمع‌آوری کرده‌اید، جایی در میان مباحث درسی نیاز به ارجاع به قسمتی از جلسات گذشته است، در این صورت می‌توانید با استفاده از [[sectoin]] به بخش مورد نظر ارجاع دهید. برای انواع ارجاعات در org-mode می‌توانید به این لینک مراجعه کنید.
+* Lecture 1 ** Array * Lecture 2 ** Linked List - [[Array]] </description>
+    </item>
+    
+  </channel>
+</rss>
