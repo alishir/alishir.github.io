@@ -40,7 +40,7 @@ site">اینجا</a> نسخه سیستم عامل را انتخاب می‌کن�
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">qemu-system-amd64 -enable-kvm -m 1G -smp 2 \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                  -vga std -nic user \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                  -drive file=ubuntu.img,if=virtio,format=qcow2 \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                  -drive file=seed.img,if=virtio,format=raw</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="کپی به کلیپ‌بورد" title="کپی" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>]]></content>
         <author>
             <name>علی</name>
-            <uri>https://github.com/alishir</uri>
+            <uri>https://www.linkedin.com/in/ali-shirvani-37a031191/</uri>
         </author>
         <category label="مجازی‌سازی" term="مجازی‌سازی"/>
         <category label="qemu" term="qemu"/>
@@ -62,7 +62,7 @@ Vreck</a> بابت این فایل کاربردی تشکر کنم. یکی از �
 <p><img decoding="async" loading="lazy" alt="NFV Architecture" src="https://alishir.github.io/assets/images/NFV_Architecture-dbb8237de9059fa857c08923dda30620.svg" class="img_ev3q"></p>]]></content>
         <author>
             <name>علی</name>
-            <uri>https://github.com/alishir</uri>
+            <uri>https://www.linkedin.com/in/ali-shirvani-37a031191/</uri>
         </author>
         <category label="NFV" term="NFV"/>
         <category label="ETSI" term="ETSI"/>
