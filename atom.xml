@@ -48,28 +48,6 @@
         <category label="Structured Concurrency" term="Structured Concurrency"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[معماری NFV]]></title>
-        <id>https://alishir.github.io/NFV-Architecture</id>
-        <link href="https://alishir.github.io/NFV-Architecture"/>
-        <updated>2024-10-23T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[امروز [این]]></summary>
-        <content type="html"><![CDATA[<p>امروز <a href="https://www.etsi.org/images/articles/NFV_Architecture.svg" target="_blank" rel="noopener noreferrer" title="NFV
-Architecture">این
-فایل</a> با فرمت <code>SVG</code> که بیانگر معماری NFV هست دیدم، صرفا برای
-ارجاعات بعدی اینجا هم قرارش میدم. جا داره که از آقای <a href="https://www.linkedin.com/in/laurent-vreck-560174/" target="_blank" rel="noopener noreferrer" title="Laurent
-Vreck LinkedIn Profile">Laurent
-Vreck</a> بابت این فایل کاربردی تشکر کنم. یکی از مزایای
-این فایل لینک‌هایی هست که در هر قسمت به مستندات مربوطه قرار داده شده.</p>
-<p><img decoding="async" loading="lazy" alt="NFV Architecture" src="https://alishir.github.io/assets/images/NFV_Architecture-dbb8237de9059fa857c08923dda30620.svg" class="img_ev3q"></p>]]></content>
-        <author>
-            <name>علی</name>
-            <uri>https://www.linkedin.com/in/ali-shirvani-37a031191/</uri>
-        </author>
-        <category label="NFV" term="NFV"/>
-        <category label="ETSI" term="ETSI"/>
-        <category label="معماری" term="معماری"/>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[ظرائف استفاده از cloud-init]]></title>
         <id>https://alishir.github.io/cloud-init</id>
         <link href="https://alishir.github.io/cloud-init"/>
@@ -95,11 +73,13 @@ site">اینجا</a> نسخه سیستم عامل را انتخاب می‌کن�
 <a href="https://cloudinit.readthedocs.io/en/22.1_a/topics/debugging.html#analyze-quickstart-kvm" target="_blank" rel="noopener noreferrer">اینجا</a>
 بهش اشاره شده.</p>
 <p>خلاصه روش به این صورت هست که شما یک فایل با اسم <code>user-data</code> ایجاد می‌کنید با محتوای زیر:</p>
-<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">#cloud-config</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">password: passw0rd</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">chpasswd: { expire: False }</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="کپی به کلیپ‌بو�رد" title="کپی" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">#cloud-config</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">password: passw0rd</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">ssh_authorized_keys:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  - ssh-ed25519 .... ali@dev</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">chpasswd: { expire: False }</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="کپی به کلیپ‌بورد" title="کپی" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
 <p>سپس با دستور زیر فایل <code>seed.iso</code> را ایجاد می‌کنید:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">sudo apt update</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">sudo apt install -y cloud-image-utils</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">cloud-localds seed.img user-data</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="کپی به کلیپ‌بورد" title="کپی" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
 <p>و در نهایت ماشین مجازی را به این صورت راه می‌اندازیم:</p>
-<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">qemu-system-amd64 -enable-kvm -m 1G -smp 2 \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                  -vga std -nic user \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                  -drive file=ubuntu.img,if=virtio,format=qcow2 \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                  -drive file=seed.img,if=virtio,format=raw</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="کپی به کلیپ‌بورد" title="کپی" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>]]></content>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">qemu-system-amd64 -enable-kvm -m 1G -smp 2 \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                  -vga std -nic user \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                  -drive file=ubuntu.img,if=virtio,format=qcow2 \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                  -drive file=seed.img,if=virtio,format=raw</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="کپی به کلیپ‌بورد" title="کپی" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>نکته دیگر اینکه در صورتی که از نسخه <code>debian-genericcloud</code> استفاده می‌کنید به دلیل عدم وجود درایورهای دستگاه‌های فیزیکی بر روی این نسخه حتما باید از نسخه‌هایی مانند <code>virtio</code> برای دستگاه‌ها استفاده کنید.</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">qemu-system-amd64 -enable-kvm -m 1G -smp 2 \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                  -vga std -nic user,model=virtio \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                  -drive file=debian-genericcloud.img,if=virtio,format=qcow2 \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                  -drive file=seed.img,if=virtio,format=raw</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="کپی به کلیپ‌بورد" title="کپی" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>]]></content>
         <author>
             <name>علی</name>
             <uri>https://www.linkedin.com/in/ali-shirvani-37a031191/</uri>
@@ -107,5 +87,27 @@ site">اینجا</a> نسخه سیستم عامل را انتخاب می‌کن�
         <category label="مجازی‌سازی" term="مجازی‌سازی"/>
         <category label="qemu" term="qemu"/>
         <category label="cloud-init" term="cloud-init"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[معماری NFV]]></title>
+        <id>https://alishir.github.io/NFV-Architecture</id>
+        <link href="https://alishir.github.io/NFV-Architecture"/>
+        <updated>2024-10-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[امروز [این]]></summary>
+        <content type="html"><![CDATA[<p>امروز <a href="https://www.etsi.org/images/articles/NFV_Architecture.svg" target="_blank" rel="noopener noreferrer" title="NFV
+Architecture">این
+فایل</a> با فرمت <code>SVG</code> که بیانگر معماری NFV هست دیدم، صرفا برای
+ارجاعات بعدی اینجا هم قرارش میدم. جا داره که از آقای <a href="https://www.linkedin.com/in/laurent-vreck-560174/" target="_blank" rel="noopener noreferrer" title="Laurent
+Vreck LinkedIn Profile">Laurent
+Vreck</a> بابت این فایل کاربردی تشکر کنم. یکی از مزایای
+این فایل لینک‌هایی هست که در هر قسمت به مستندات مربوطه قرار داده شده.</p>
+<p><img decoding="async" loading="lazy" alt="NFV Architecture" src="https://alishir.github.io/assets/images/NFV_Architecture-dbb8237de9059fa857c08923dda30620.svg" class="img_ev3q"></p>]]></content>
+        <author>
+            <name>علی</name>
+            <uri>https://www.linkedin.com/in/ali-shirvani-37a031191/</uri>
+        </author>
+        <category label="NFV" term="NFV"/>
+        <category label="ETSI" term="ETSI"/>
+        <category label="معماری" term="معماری"/>
     </entry>
 </feed>
