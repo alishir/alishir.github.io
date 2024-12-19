@@ -8,9 +8,9 @@
     <subtitle>نُکَتْ Blog</subtitle>
     <icon>https://alishir.github.io/img/favicon.ico</icon>
     <entry>
-        <title type="html"><![CDATA[روش کدگذاری TBCD-String]]></title>
-        <id>https://alishir.github.io/tbcd-string-encoding</id>
-        <link href="https://alishir.github.io/tbcd-string-encoding"/>
+        <title type="html"><![CDATA[روش کدگذاری TBCD]]></title>
+        <id>https://alishir.github.io/telephony-binary-coded-decimal</id>
+        <link href="https://alishir.github.io/telephony-binary-coded-decimal"/>
         <updated>2024-12-19T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[کدگذاری، مشخص کننده ادبیات مشترک برای تعامل اجزاء یک سیستم با یکدیگر]]></summary>
         <content type="html"><![CDATA[<p>کدگذاری، مشخص کننده ادبیات مشترک برای تعامل اجزاء یک سیستم با یکدیگر
@@ -19,35 +19,37 @@
 کدگذاری</a>
 استفاده شده می‌تواند بیانگر تاریخ ۱ نوابر سال ۲۰۰۶ و یا ۱۱ ژانویه سال
 ۲۰۰۶ باشد. این مثال به خوبی اهمیت موضوع کدگذاری را مشخص می‌کند.</p>
-<p>یکی از روش‌های کدگذاری مورد استفاده در شبکه‌های مخابراتی، روش
-TBCD-String است. این روش برای کدگذاری مقادیری مانند <code>IMSI</code>، <code>IMEI</code> و
-برخی آدرس‌ها و شماره‌ها استفاده می‌شود. مثلا در سند <a href="https://www.3gpp.org/dynareport?code=29338" target="_blank" rel="noopener noreferrer">3GPP TS
+<p>یکی از روش‌های کدگذاری مورد استفاده در شبکه‌های مخابراتی، روش Telephony
+Binary-Coded Decimal یا به اختصار TBCD است. این روش برای کدگذاری
+مقادیری مانند <code>IMSI</code>، <code>IMEI</code> و برخی آدرس‌ها و شماره‌ها استفاده
+می‌شود. مثلا در سند <a href="https://www.3gpp.org/dynareport?code=29338" target="_blank" rel="noopener noreferrer">3GPP TS
 29.338</a> به چند نمونه از
-آدرس‌هایی که با روش TBCD-String کدگذاری شده‌اند اشاره شده است.</p>
-<p>روش کدگذاری TBCD-String برای نمایش اعداد بین ۰ تا ۹ و حروف <code>a, b, c,#,*</code> استفاده می‌شود. برای صرفه‌جویی در فضا، هر دو رقم متوالی در یکی
-بایت ذخیره می‌شوند، به عبارت دیگر برای ذخیره هر رقم از چهار بیت استفاده
+آدرس‌هایی که با روش TBCD کدگذاری شده‌اند اشاره شده است.</p>
+<p>روش کدگذاری TBCD برای نمایش اعداد بین ۰ تا ۹ و حروف <code>a, b, c,#,*</code>
+استفاده می‌شود. برای صرفه‌جویی در فضا، هر دو رقم متوالی در یکی بایت
+ذخیره می‌شوند، به عبارت دیگر برای ذخیره هر رقم از چهار بیت استفاده
 می‌شود. در صورتی که تعداد ارقام فرد باشد برای پر کردن ۴ بیت باقی‌مانده،
 از مقدار <code>1111</code> به عنوان پرکننده یا <code>filler</code> استفاده می‌شود.</p>
 <p>اعداد ۰ تا ۹ با مقدار متناظر دودویی آن‌ها در نمایش ۴ بیتی کدگذاری
 می‌شوند و از مقادیر زیر برای حروف <code>a, b, c, # ,*</code> استفاده می‌شود.</p>
 <table><thead><tr><th style="text-align:center">حرف</th><th style="text-align:center">مقدار دودویی</th></tr></thead><tbody><tr><td style="text-align:center">*</td><td style="text-align:center">1010</td></tr><tr><td style="text-align:center">#</td><td style="text-align:center">1011</td></tr><tr><td style="text-align:center">a</td><td style="text-align:center">1100</td></tr><tr><td style="text-align:center">b</td><td style="text-align:center">1101</td></tr><tr><td style="text-align:center">c</td><td style="text-align:center">1110</td></tr></tbody></table>
-<p>در شکل زیر روش کدگذاری TBCD-String برای مقدار <code>43211</code> نمایش داده
-شده. ابتدا هر رقم را با مقدار دودویی ۴ بیتی متناظر تبدیل می‌کنیم. سپس
-هر دو رقم را در یک بایت قرار می‌دهیم، به این صورت که اگر بیت‌های موجود
-در یک بایت را از راست به چپ، از ۱ تا ۸ شماره‌گذاری کنیم، بیت‌های شماره ۱
-تا ۴ برای نمایش رقم اول و بیت‌های شماره ۵ تا ۸ برای نمایش رقم دوم تخصیص
+<p>در شکل زیر روش کدگذاری TBCD برای مقدار <code>43211</code> نمایش داده شده. ابتدا
+هر رقم را با مقدار دودویی ۴ بیتی متناظر تبدیل می‌کنیم. سپس هر دو رقم را
+در یک بایت قرار می‌دهیم، به این صورت که اگر بیت‌های موجود در یک بایت را
+از راست به چپ، از ۱ تا ۸ شماره‌گذاری کنیم، بیت‌های شماره ۱ تا ۴ برای
+نمایش رقم اول و بیت‌های شماره ۵ تا ۸ برای نمایش رقم دوم تخصیص
 می‌یابند. در این مثال با توجه به اینکه تعداد ارقام فرد است، از مقدار
 <code>1111</code> به عنوان پرکننده ۴ بیت خالی استفاده می‌شود که در شکل با رنگ قرمز
 نمایش داده شده است. در نهایت حاصل کدگذاری مقدار <code>0x3412F1</code> می‌باشد.</p>
 <div style="text-align:center"><p><img decoding="async" loading="lazy" alt="TBCD-String Encoding Example" src="https://alishir.github.io/assets/images/example_43211-5e2c6e7e64980a866ed71578a07b0a9a.svg" width="615" height="394" class="img_ev3q"></p></div>
-<p>تصویر زیر توضیحات کدگذاری TBCD-String است که در سند <a href="https://www.3gpp.org/dynareport?code=29002" target="_blank" rel="noopener noreferrer">3GPP TS
+<p>تصویر زیر توضیحات کدگذاری TBCD است که در سند <a href="https://www.3gpp.org/dynareport?code=29002" target="_blank" rel="noopener noreferrer">3GPP TS
 29.002</a> به آن اشاره شده.</p>
 <div style="text-align:center"><p><img decoding="async" loading="lazy" alt="TBCD-String Encoding" src="https://alishir.github.io/assets/images/tbcd_encoding-7998f45655a0fd2267426e7c37fb78ab.png" width="1845" height="344" class="img_ev3q"></p></div>]]></content>
         <author>
             <name>علی</name>
             <uri>https://www.linkedin.com/in/ali-shirvani-37a031191/</uri>
         </author>
-        <category label="TBCD-String" term="TBCD-String"/>
+        <category label="TBCD" term="TBCD"/>
         <category label="کدگذاری" term="کدگذاری"/>
     </entry>
     <entry>
