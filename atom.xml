@@ -166,6 +166,28 @@ Binary-Coded Decimal یا به اختصار TBCD است. این روش برای 
         <category label="Structured Concurrency" term="Structured Concurrency"/>
     </entry>
     <entry>
+        <title type="html"><![CDATA[معماری NFV]]></title>
+        <id>https://alishir.github.io/NFV-Architecture</id>
+        <link href="https://alishir.github.io/NFV-Architecture"/>
+        <updated>2024-10-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[امروز [این]]></summary>
+        <content type="html"><![CDATA[<p>امروز <a href="https://www.etsi.org/images/articles/NFV_Architecture.svg" target="_blank" rel="noopener noreferrer" title="NFV
+Architecture">این
+فایل</a> با فرمت <code>SVG</code> که بیانگر معماری NFV هست دیدم، صرفا برای
+ارجاعات بعدی اینجا هم قرارش میدم. جا داره که از آقای <a href="https://www.linkedin.com/in/laurent-vreck-560174/" target="_blank" rel="noopener noreferrer" title="Laurent
+Vreck LinkedIn Profile">Laurent
+Vreck</a> بابت این فایل کاربردی تشکر کنم. یکی از مزایای
+این فایل لینک‌هایی هست که در هر قسمت به مستندات مربوطه قرار داده شده.</p>
+<p><img decoding="async" loading="lazy" alt="NFV Architecture" src="https://alishir.github.io/assets/images/NFV_Architecture-dbb8237de9059fa857c08923dda30620.svg" class="img_ev3q"></p>]]></content>
+        <author>
+            <name>علی</name>
+            <uri>https://www.linkedin.com/in/ali-shirvani-37a031191/</uri>
+        </author>
+        <category label="NFV" term="NFV"/>
+        <category label="ETSI" term="ETSI"/>
+        <category label="معماری" term="معماری"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[ظرائف استفاده از cloud-init]]></title>
         <id>https://alishir.github.io/cloud-init</id>
         <link href="https://alishir.github.io/cloud-init"/>
@@ -205,27 +227,5 @@ site">اینجا</a> نسخه سیستم عامل را انتخاب می‌کن�
         <category label="مجازی‌سازی" term="مجازی‌سازی"/>
         <category label="qemu" term="qemu"/>
         <category label="cloud-init" term="cloud-init"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[معماری NFV]]></title>
-        <id>https://alishir.github.io/NFV-Architecture</id>
-        <link href="https://alishir.github.io/NFV-Architecture"/>
-        <updated>2024-10-23T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[امروز [این]]></summary>
-        <content type="html"><![CDATA[<p>امروز <a href="https://www.etsi.org/images/articles/NFV_Architecture.svg" target="_blank" rel="noopener noreferrer" title="NFV
-Architecture">این
-فایل</a> با فرمت <code>SVG</code> که بیانگر معماری NFV هست دیدم، صرفا برای
-ارجاعات بعدی اینجا هم قرارش میدم. جا داره که از آقای <a href="https://www.linkedin.com/in/laurent-vreck-560174/" target="_blank" rel="noopener noreferrer" title="Laurent
-Vreck LinkedIn Profile">Laurent
-Vreck</a> بابت این فایل کاربردی تشکر کنم. یکی از مزایای
-این فایل لینک‌هایی هست که در هر قسمت به مستندات مربوطه قرار داده شده.</p>
-<p><img decoding="async" loading="lazy" alt="NFV Architecture" src="https://alishir.github.io/assets/images/NFV_Architecture-dbb8237de9059fa857c08923dda30620.svg" class="img_ev3q"></p>]]></content>
-        <author>
-            <name>علی</name>
-            <uri>https://www.linkedin.com/in/ali-shirvani-37a031191/</uri>
-        </author>
-        <category label="NFV" term="NFV"/>
-        <category label="ETSI" term="ETSI"/>
-        <category label="معماری" term="معماری"/>
     </entry>
 </feed>
