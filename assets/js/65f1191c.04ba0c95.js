@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkalishir_github_io=self.webpackChunkalishir_github_io||[]).push([[4849],{8563:a=>{a.exports=JSON.parse('{"tag":{"label":"BEAM","permalink":"/tags/beam","allTagsPath":"/tags","count":1,"unlisted":false},"listMetadata":{"permalink":"/tags/beam","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkalishir_github_io=self.webpackChunkalishir_github_io||[]).push([[7472],{5513:i=>{i.exports=JSON.parse('{"title":"\u0646\u0648\u0634\u062a\u0647\u200c\u0647\u0627\u06cc \u0627\u062e\u06cc\u0631","items":[]}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkalishir_github_io=self.webpackChunkalishir_github_io||[]).push([[555],{157:a=>{a.exports=JSON.parse('{"tag":{"label":"EENA","permalink":"/tags/eena","allTagsPath":"/tags","count":1,"unlisted":false},"listMetadata":{"permalink":"/tags/eena","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
