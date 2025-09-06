@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alishir.github.io/</id>
     <title>نُکَتْ Blog</title>
-    <updated>2025-07-29T00:00:00.000Z</updated>
+    <updated>2025-09-06T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://alishir.github.io/"/>
     <subtitle>نُکَتْ Blog</subtitle>
@@ -11,51 +11,72 @@
         <title type="html"><![CDATA[الیکسیر برای پروژه‌های مخابراتی]]></title>
         <id>https://alishir.github.io/why-we-chose-elixir-for-telecom-projects</id>
         <link href="https://alishir.github.io/why-we-chose-elixir-for-telecom-projects"/>
-        <updated>2025-07-29T00:00:00.000Z</updated>
+        <updated>2025-09-06T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[از جمله مهم‌ترین الزامات زیرساخت‌های مخابراتی، حفظ عملکرد سیستم در]]></summary>
         <content type="html"><![CDATA[<p>از جمله مهم‌ترین الزامات زیرساخت‌های مخابراتی، حفظ عملکرد سیستم در
 مواجهه با خطاها است. زبان ارلنگ در پاسخ به این نیاز طراحی شده است.</p>
 <p>الیکسیر یک زبان برنامه‌نویسی همروند و تابعی، و مبتنی بر ماشین مجازی
 BEAM است. ماشین مجازی BEAM در خلال توسعه و بهبود زبان برنامه‌نویسی
 ارلنگ ایجاد شده است.</p>
-<p>به عنوان مثال یک سرور ثبت‌کننده، Registrar Server، را در نظر بگیرد. این
-سرور وظیفه دارد با پردازش پیام‌های SIP، نگاشت بین نام کاربری مشترک و
-نقطه اتصال او در شبکه را نگهداری کند. به عنوان نمونه این سرور میداند
-که کاربر با نام کاربری <a href="mailto:ali@mci.ir" target="_blank" rel="noopener noreferrer">ali@mci.ir</a> در آدرس 172.16.20.110:5060 در دسترس
-است. با توجه به تنوع نرم‌افزارهایی که کاربر می‌تواند برای این منظور
-استفاده کند، سرور ثبت‌کننده باید دقت کافی در پردازش پیام‌های دریافتی را
-لحاظ کند و با <a href="https://en.wikipedia.org/wiki/Defensive_programming" target="_blank" rel="noopener noreferrer">رویکرد
-تدافعی</a> انواع
-خطاهای احتمالی را بررسی کند. اما با تمام این ملاحظات باز هم ممکن است
-یک پیام ارسالی از طرف کاربر باعث ایجاد اختلال در عملکرد کل سرور شود.
-برای نمونه می‌توان به <a href="https://skalatan.de/en/blog/advisory-hw-2018-05" target="_blank" rel="noopener noreferrer">این
+<p>به عنوان مثال یک سرور ثبت‌کننده<sup><a href="https://alishir.github.io/why-we-chose-elixir-for-telecom-projects#user-content-fn-1-5297b1" id="user-content-fnref-1-5297b1" data-footnote-ref="true" aria-describedby="footnote-label">1</a></sup> را در نظر بگیرد. این سرور وظیفه
+دارد با پردازش پیام‌های SIP، نگاشت بین نام کاربری مشترک و نقطه اتصال او
+در شبکه را نگهداری کند. به عنوان نمونه این سرور میداند که کاربر با نام
+کاربری <a href="mailto:bob@example.com" target="_blank" rel="noopener noreferrer">bob@example.com</a> در آدرس 172.16.20.110:5060 در دسترس است. با
+توجه به تنوع نرم‌افزارهایی که کاربر می‌تواند برای این منظور استفاده کند،
+سرور ثبت‌کننده باید دقت کافی در پردازش پیام‌های دریافتی را لحاظ کند و با
+<a href="https://en.wikipedia.org/wiki/Defensive_programming" target="_blank" rel="noopener noreferrer">رویکرد تدافعی</a>
+انواع خطاهای احتمالی را بررسی کند. اما با تمام این ملاحظات باز هم ممکن
+است یک پیام ارسالی از طرف کاربر باعث ایجاد اختلال در عملکرد کل سرور
+شود.  برای نمونه می‌توان به <a href="https://skalatan.de/en/blog/advisory-hw-2018-05" target="_blank" rel="noopener noreferrer">این
 CVE</a> در kamailio
-اشاره کرد که یک پیام با ساختار نامناسب باعث از کار افتادن کل سرور
-می‌شود.</p>
-<p>زبان ارلنگ با الهام از مفهوم پردازه‌ها، Process، در سیستم عامل و فراهم
-کردن زیرساخت مناسب برای شکستن کارهای پیچیده به صورت سلسله مراتبی از
-کارهای ساده‌تر، بستر مناسبی برای توسعه نرم‌افزارهای پایدار در برابر
-خطاها ایجاد کرده است.</p>
+اشاره کرد که یک پیام با ساختار نامناسب ‌می‌توانسته عملکرد کل سرور را
+مختل کند.</p>
+<p>زبان ارلنگ با الهام از مفهوم پردازه‌ها<sup><a href="https://alishir.github.io/why-we-chose-elixir-for-telecom-projects#user-content-fn-2-5297b1" id="user-content-fnref-2-5297b1" data-footnote-ref="true" aria-describedby="footnote-label">2</a></sup> در سیستم عامل و فراهم کردن
+زیرساخت مناسب برای شکستن کارهای پیچیده به سلسله مراتبی از کارهای
+ساده‌تر، بستر مناسبی برای توسعه نرم‌افزارهای پایدار در برابر خطاها ایجاد
+کرده است.</p>
 <p>همان‌طور که پردازه‌ها در سیستم عامل به صورت کاملا مجزا از یکدیگر اجرا
 می‌شوند و اختلال در یک پردازه تاثیری در عملکرد دیگر پردازه‌ها ندارد، در
-زبان ارلنگ نیز پردازه‌ها کاملا مستقل از یکدیگر اجرا می‌شوند. البته دو
-امکان link و monitor کردن پردازه‌ها در ارلنگ وجود دارد و از این طریق یک
-پردازه می‌تواند در جریان وضعیت پردازه دیگر قرار بگیرد و در صورت بروز
-مشکل، فرآیندهای لازم را اجرا کند. این دو مفهوم پایه و اساس بحث درخت
-نظارت، Supervision Tree، در ارلنگ است که خود نیاز به مطلبی مجزا دارد.</p>
+زبان ارلنگ نیز پردازه‌ها کاملا مستقل از یکدیگر اجرا می‌شوند. البته
+قابلیت‌های
+<a href="https://www.erlang.org/doc/system/ref_man_processes.html#links" target="_blank" rel="noopener noreferrer">link</a>
+و
+<a href="https://www.erlang.org/doc/system/ref_man_processes.html#monitors" target="_blank" rel="noopener noreferrer">monitor</a>
+کردن پردازه‌ها در ارلنگ وجود دارد. با استفاده از این قابلیت‌ها یک پردازه
+می‌تواند در جریان وضعیت پردازه دیگر قرار بگیرد و در صورت بروز مشکل،
+رویه‌های لازم را اجرا کند. این دو مفهوم پایه و اساس بحث درخت نظارت<sup><a href="https://alishir.github.io/why-we-chose-elixir-for-telecom-projects#user-content-fn-3-5297b1" id="user-content-fnref-3-5297b1" data-footnote-ref="true" aria-describedby="footnote-label">3</a></sup>
+در ارلنگ است که خود نیاز به مطلبی مجزا دارد.</p>
 <p>تفاوت اساسی پردازه‌های ارلنگ با پردازه‌های سیستم عامل، هزینه و سربار
-بسیار پائین ایجاد و نگهداری آن‌هاست. به صورتی که می‌توان در مدت زمان
+بسیار پائین ایجاد و نگهداری آن‌هاست. به گونه‌ای که می‌توان در مدت زمان
 اندکی میلیون‌ها پردازه ایجاد کرد و آن‌ها به صورت همروند در حال اجرا
 باشند. این تفاوت اساسی امکان توسعه سیستم‌های پایدار در برابر خطا را
 فراهم می‌کند.</p>
-<p>به عنوان نمونه، در مثال سرور ثبت‌کننده که بیان شد، اگر هر پیام دریافتی
-توسط یک پردازه مستقل پردازش شود، در صورت بروز خطا تنها عملکرد آن
-پردازه مختلف می‌شود و عملکرد کلی سیستم دچار مشکل نمی‌شود. به این ترتیب
-با استفاده از مفهوم پردازه‌ها می‌توان دامنه انتشار خطا را به شدت محدود
-کرد و عملکرد سیستم در مواجهه با خطاهای مختلف را حفظ کرد. از آنجایی که
-در سیستم‌های مخابراتی عمدتا تعامل بین سیستم‌های متنوع از شرکت‌های مختلف
-وجود دارد و هر شرکت می‌تواند پیاده‌سازی متفاوتی از استاندارد داشته باشد،
-کاهش دامنه خطا امری حیاتی و ضروری است.</p>]]></content>
+<p>در مثال سرور ثبت‌کننده که پیش‌تر بیان شد، اگر هر پیام دریافتی توسط یک
+پردازه مستقل پردازش شود، در صورت بروز خطا تنها عملکرد آن پردازه مختل
+می‌شود و عملکرد کلی سیستم دچار مشکل نمی‌شود. به این ترتیب با استفاده از
+مفهوم پردازه‌ها می‌توان دامنه انتشار خطا را به شدت محدود کرد و عملکرد
+سیستم در مواجهه با خطاهای مختلف را حفظ کرد. از آنجایی که در سیستم‌های
+مخابراتی عمدتا تعامل بین سیستم‌های متنوع از شرکت‌های مختلف وجود دارد و
+هر شرکت می‌تواند پیاده‌سازی متفاوتی از استاندارد داشته باشد، کاهش دامنه
+خطا امری حیاتی و ضروری است. این
+<a href="https://youtu.be/HyiSYHfESX4?t=1238" target="_blank" rel="noopener noreferrer">ویدئو</a> به نقش این ویژگی اساسی در
+توسعه محصول SGSN/MME شرکت اریکسون و دستیابی به <a href="https://en.wikipedia.org/wiki/Five_nines#:~:text=Five%20nines%2C%20commonly%20taken%20to,minutes%20of%20downtime%20per%20year" target="_blank" rel="noopener noreferrer">دسترسی‌پذیری
+۹۹.۹۹۹٪</a>
+اشاره می‌کند.</p>
+<!-- -->
+<section data-footnotes="true" class="footnotes"><h2 class="anchor anchorWithStickyNavbar_tMk3 sr-only" id="footnote-label">پاورقی‌ها<a href="https://alishir.github.io/why-we-chose-elixir-for-telecom-projects#footnote-label" class="hash-link" aria-label="لینک مستقیم به پاورقی‌ها" title="لینک مستقیم به پاورقی‌ها">​</a></h2>
+<ol>
+<li id="user-content-fn-1-5297b1">
+<p>Registrar Server <a href="https://alishir.github.io/why-we-chose-elixir-for-telecom-projects#user-content-fnref-1-5297b1" data-footnote-backref="" aria-label="Back to reference 1" class="data-footnote-backref">↩</a></p>
+</li>
+<li id="user-content-fn-2-5297b1">
+<p>Process <a href="https://alishir.github.io/why-we-chose-elixir-for-telecom-projects#user-content-fnref-2-5297b1" data-footnote-backref="" aria-label="Back to reference 2" class="data-footnote-backref">↩</a></p>
+</li>
+<li id="user-content-fn-3-5297b1">
+<p>Supervision Tree <a href="https://alishir.github.io/why-we-chose-elixir-for-telecom-projects#user-content-fnref-3-5297b1" data-footnote-backref="" aria-label="Back to reference 3" class="data-footnote-backref">↩</a></p>
+</li>
+</ol>
+</section>]]></content>
         <author>
             <name>علی</name>
             <uri>https://www.linkedin.com/in/ali-shirvani-37a031191/</uri>
@@ -224,28 +245,6 @@ Binary-Coded Decimal یا به اختصار TBCD است. این روش برای 
         <category label="Structured Concurrency" term="Structured Concurrency"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[معماری NFV]]></title>
-        <id>https://alishir.github.io/NFV-Architecture</id>
-        <link href="https://alishir.github.io/NFV-Architecture"/>
-        <updated>2024-10-23T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[امروز [این]]></summary>
-        <content type="html"><![CDATA[<p>امروز <a href="https://www.etsi.org/images/articles/NFV_Architecture.svg" target="_blank" rel="noopener noreferrer" title="NFV
-Architecture">این
-فایل</a> با فرمت <code>SVG</code> که بیانگر معماری NFV هست دیدم، صرفا برای
-ارجاعات بعدی اینجا هم قرارش میدم. جا داره که از آقای <a href="https://www.linkedin.com/in/laurent-vreck-560174/" target="_blank" rel="noopener noreferrer" title="Laurent
-Vreck LinkedIn Profile">Laurent
-Vreck</a> بابت این فایل کاربردی تشکر کنم. یکی از مزایای
-این فایل لینک‌هایی هست که در هر قسمت به مستندات مربوطه قرار داده شده.</p>
-<p><img decoding="async" loading="lazy" alt="NFV Architecture" src="https://alishir.github.io/assets/images/NFV_Architecture-dbb8237de9059fa857c08923dda30620.svg" class="img_MQSz"></p>]]></content>
-        <author>
-            <name>علی</name>
-            <uri>https://www.linkedin.com/in/ali-shirvani-37a031191/</uri>
-        </author>
-        <category label="NFV" term="NFV"/>
-        <category label="ETSI" term="ETSI"/>
-        <category label="معماری" term="معماری"/>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[ظرائف استفاده از cloud-init]]></title>
         <id>https://alishir.github.io/cloud-init</id>
         <link href="https://alishir.github.io/cloud-init"/>
@@ -285,5 +284,27 @@ site">اینجا</a> نسخه سیستم عامل را انتخاب می‌کن�
         <category label="مجازی‌سازی" term="مجازی‌سازی"/>
         <category label="qemu" term="qemu"/>
         <category label="cloud-init" term="cloud-init"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[معماری NFV]]></title>
+        <id>https://alishir.github.io/NFV-Architecture</id>
+        <link href="https://alishir.github.io/NFV-Architecture"/>
+        <updated>2024-10-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[امروز [این]]></summary>
+        <content type="html"><![CDATA[<p>امروز <a href="https://www.etsi.org/images/articles/NFV_Architecture.svg" target="_blank" rel="noopener noreferrer" title="NFV
+Architecture">این
+فایل</a> با فرمت <code>SVG</code> که بیانگر معماری NFV هست دیدم، صرفا برای
+ارجاعات بعدی اینجا هم قرارش میدم. جا داره که از آقای <a href="https://www.linkedin.com/in/laurent-vreck-560174/" target="_blank" rel="noopener noreferrer" title="Laurent
+Vreck LinkedIn Profile">Laurent
+Vreck</a> بابت این فایل کاربردی تشکر کنم. یکی از مزایای
+این فایل لینک‌هایی هست که در هر قسمت به مستندات مربوطه قرار داده شده.</p>
+<p><img decoding="async" loading="lazy" alt="NFV Architecture" src="https://alishir.github.io/assets/images/NFV_Architecture-dbb8237de9059fa857c08923dda30620.svg" class="img_MQSz"></p>]]></content>
+        <author>
+            <name>علی</name>
+            <uri>https://www.linkedin.com/in/ali-shirvani-37a031191/</uri>
+        </author>
+        <category label="NFV" term="NFV"/>
+        <category label="ETSI" term="ETSI"/>
+        <category label="معماری" term="معماری"/>
     </entry>
 </feed>
