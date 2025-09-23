@@ -8,7 +8,7 @@
     <subtitle>نُکَتْ Blog</subtitle>
     <icon>https://alishir.github.io/img/favicon.ico</icon>
     <entry>
-        <title type="html"><![CDATA[درخت نظارت]]></title>
+        <title type="html"><![CDATA[معرفی درخت نظارت]]></title>
         <id>https://alishir.github.io/supervision-tree</id>
         <link href="https://alishir.github.io/supervision-tree"/>
         <updated>2025-09-17T00:00:00.000Z</updated>
@@ -17,44 +17,46 @@
 قبل</a>
 پیرامون یکی از مهمترین الزامات سیستم‌های مخابراتی، یعنی حفظ عملکرد
 سیستم در مواجهه با خطا و رویکرد زبان ارلنگ برای پاسخ به این نیاز صحبت
-کردیم.  همانطور که گفته شد زبان ارلنگ با الهام از مفهوم پردازه‌ها در
-سیستم عامل، زیرساخت اجرای همروند انبوهی از پردازه‌ها را فراهم می‌کند و
-از طریق آن می‌توان دامنه انتشار خطا را محدود کرد. اما برای ارائه عملکرد
-قابل قبول در مواجهه با خطا، نیاز به نظارت، تشخیص سریع خطا و راه‌ اندازی
-مجدد پردازه مربوطه است. در این نوشته به معرفی درخت نظارت می‌پردازیم که
-در واقع تکمیل کننده رویکرد ارلنگ برای آن نیاز سیستم‌های مخابراتی است.</p>
+کردیم. گفته شد که زبان ارلنگ با الهام از مفهوم پردازه‌ها در سیستم عامل،
+زیرساختِ اجرای همروند انبوهی از پردازه‌ها را فراهم می‌کند و از طریق آن
+می‌توان دامنه انتشار خطا را محدود کرد. اما برای ارائه عملکرد قابل قبول
+در مواجهه با خطا، نیاز به نظارت، تشخیص سریع خطا و راه‌ اندازی مجدد
+پردازه مربوطه است. در این نوشته به معرفی درخت نظارت، که در واقع تکمیل
+کننده رویکرد ارلنگ برای توسعه سیستم‌های پایدار در مواجهه با خطا است،
+می‌پردازیم.</p>
 <p>شرکت فرضی زوتِل<sup><a href="https://alishir.github.io/supervision-tree#user-content-fn-1-95bd1a" id="user-content-fnref-1-95bd1a" data-footnote-ref="true" aria-describedby="footnote-label">1</a></sup> را در نظر بگیرد که به ارائه خدمات مخابراتی در باغ
 وحش‌های جهان مشغول است. جهت کنترل بیشتر روی تماس‌ها، این شرکت از یک هسته
-مرکزی برای تبادل بسته‌های صوتی مربوط به هر تماس استفاده می‌کند. همانطور
-که در شکل زیر نمایش داده شده، تمام بسته‌های RTP مربوط به تماس‌ها از این
-هسته مرکزی که به صورت یک پردازه سیستم عامل اجرا شده می‌گذرد.</p>
+مرکزی برای تبادل بسته‌های صوتیِ هر تماس استفاده می‌کند. همان‌طور که در شکل
+زیر نمایش داده شده، تمام بسته‌های RTP مربوط به تماس‌ها از این هسته
+مرکزی، که به صورت یک پردازه سیستم عامل اجرا می‌شود، عبور می‌کند.</p>
 <div style="text-align:center"><p><img decoding="async" loading="lazy" alt="ZooTel Media Engine" src="https://alishir.github.io/assets/images/zootel-single-process-acaab56f0f2179e0930fbfcb5333cce3.svg" class="img_MQSz"></p></div>
 <p>به خاطر پراکندگی حیوانات در کشورهای مختلف، این شرکت با تنوع بسیار
 بالایی از گوشی‌ها مواجه است. این تنوع بالا می‌تواند چالش‌های بسیاری هم در
 حوزه سیگنال‌دهی<sup><a href="https://alishir.github.io/supervision-tree#user-content-fn-2-95bd1a" id="user-content-fnref-2-95bd1a" data-footnote-ref="true" aria-describedby="footnote-label">2</a></sup>، مشابه آنچه در <a href="https://alishir.github.io/why-we-chose-elixir-for-telecom-projects" target="_blank" rel="noopener noreferrer">نوشته
 پیشین</a>
-ذکر شد، و هم در حوزه بسته‌های صوتی، مشابه بسته‌های مرموز RTP که در <a href="https://nickvsnetworking.com/tales-from-the-trenches-samsung-mystery-packet-on-ims-call/" target="_blank" rel="noopener noreferrer">این
+ذکر شد، و هم در حوزه تبادل بسته‌های صوتی، مشابه بسته‌های مرموز RTP که در
+<a href="https://nickvsnetworking.com/tales-from-the-trenches-samsung-mystery-packet-on-ims-call/" target="_blank" rel="noopener noreferrer">این
 نوشته</a>
 به آن‌ها اشاره شده، برای شرکت زوتل ایجاد کند. حتی اگر در هسته مرکزی
-تمام حالات محتمل که منجر به خطا می‌شوند، بررسی شوند، باز هم به دلیل
+تمام حالات محتمل که منجر به خطا می‌شوند، بررسی شده باشد، باز هم به دلیل
 استفاده از کتابخانه‌های دیگر امکان مختل شدن فعالیت هسته مرکزی و از دست
 رفتن تمامی تماس‌ها وجود دارد، مشابه آنچه در <a href="https://github.com/sipwise/rtpengine/issues/1817" target="_blank" rel="noopener noreferrer">این
 مساله</a> ذکر شده است.</p>
 <div style="text-align:center"><p><img decoding="async" loading="lazy" alt="Bad RTP Media Engine" src="https://alishir.github.io/assets/images/bad-rtp-single-process-bc94ee3f2caa172be8f8734c7924bc14.svg" class="img_MQSz"></p></div>
 <p>با استفاده از مدل پردازه‌های ارلنگ می‌توان جلوی انتشار خطا را گرفت و
 تنها یک تماس را از دست داد. برای این منظور پس از اینکه مشخصات مبدا و
-مقصد برای ارسال بسته‌های صوتی در مرحله سیگنال‌دهی مشخص شد، مشابه شکل زیر
-به ازای هر تماس یک پردازه ارلنگ جهت تبادل بسته‌های صوتی بین طرفین ایجاد
-می‌کنیم.</p>
+مقصد برای ارسال بسته‌های صوتی در مرحله سیگنال‌دهی مشخص شد، مطابق آنچه در
+شکل زیر نمایش داده شده، به ازای هر تماس یک پردازه ارلنگ جهت تبادل
+بسته‌های صوتی بین طرفین ایجاد می‌کنیم.</p>
 <div style="text-align:center"><p><img decoding="async" loading="lazy" alt="Bad RTP Media Engine" src="https://alishir.github.io/assets/images/zootel-erlang-process-c04d56bda13f875c192e924788797453.svg" class="img_MQSz"></p></div>
 <p>با توجه به اینکه هر پردازه مسئول انتقال بسته‌ها در یک تماس است، دریافت
-بسته‌های مرموز تنها عملکرد یک پردازه را مختل می‌کند و عملا فقط یک تماس
+بسته‌های مرموز تنها عملکرد یک پردازه را مختل می‌کند و عملا تنها یک تماس
 را از دست می‌دهیم، بر خلاف حالت قبل که کل تماس‌ها از دست می‌رفت.</p>
 <div style="text-align:center"><p><img decoding="async" loading="lazy" alt="Bad RTP Media Engine" src="https://alishir.github.io/assets/images/bad-rtp-erlang-process-1413709aee020c13eaea5fff65592a7e.svg" class="img_MQSz"></p></div>
-<p>با این وجود از دست دادن کامل یک تماس نیز مطلوب نیست. بهترین حالت این
-است که تنها شاهد یک اختلال جزئی در انتقال پیام‌های صوتی باشیم. برای
-رسیدن به این حالت ، ابتدا باید متوجه مختل شدن پردازه‌ مربوطه شویم و سپس
-در سریع‌ترین زمان ممکن آن پردازه را مجددا اجرا کنیم.</p>
+<p>با این وجود از دست دادن کامل یک تماس نیز مطلوب نیست. بهتر است که تنها
+شاهد یک اختلال جزئی در انتقال پیام‌های صوتی باشیم. برای رسیدن به این
+هدف، ابتدا باید متوجه مختل شدن پردازه‌ مربوطه شویم و سپس در سریع‌ترین
+زمان ممکن آن پردازه را مجددا اجرا کنیم.</p>
 <p>پیش‌تر اشاره شد که پردازه‌ها در ارلنگ به صورت کاملا مستقل از یکدیگر اجرا
 می‌شوند. با این حال توابعی برای نظارت بر عملکرد یک پردازه نیز در نظر
 گرفته شده است. می‌توانیم پردازه‌ای جدید ایجاد کنیم که با استفاده از آن
@@ -66,10 +68,10 @@
 نمایش داده شده.</p>
 <div style="text-align:center"><p><img decoding="async" loading="lazy" alt="Bad RTP Media Engine" src="https://alishir.github.io/assets/images/simple-supervisor-25c931c8bc2d595695d7083bb11ac1a5.svg" class="img_MQSz"></p></div>
 <p>پردازه‌ای که به عنوان ناظر ایجاد کردیم خود نیز یک پردازه ارلنگ است و
-می‌تواند توسط یک پردازه دیگر مورد نظارت واقع شود. در واقع این ویژگی
-ساده امکان تعریف درخت نظارت را ایجاد می‌کند. از طریق درخت نظارت می‌توان
-مسائل پیچیده‌ را به صورت پردازه‌هایی ساده در یک درخت نظارت مدلسازی
-کرد. به عنوان نمونه در شکل زیر درخت نظارت مربوط به پشته<sup><a href="https://alishir.github.io/supervision-tree#user-content-fn-3-95bd1a" id="user-content-fnref-3-95bd1a" data-footnote-ref="true" aria-describedby="footnote-label">3</a></sup> SIP پروژه
+می‌تواند توسط یک پردازه نظارت شود. در واقع این ویژگی ساده امکان تعریف
+درخت نظارت را ایجاد می‌کند. از طریق درخت نظارت می‌توان مسائل پیچیده‌ را
+به صورت پردازه‌هایی ساده در یک درخت نظارت مدل‌سازی کرد. به عنوان نمونه
+در شکل زیر درخت نظارت مربوط به پشته<sup><a href="https://alishir.github.io/supervision-tree#user-content-fn-3-95bd1a" id="user-content-fnref-3-95bd1a" data-footnote-ref="true" aria-describedby="footnote-label">3</a></sup> SIP پروژه
 <a href="https://www.stacken.kth.se/project/yxa/architecture.html" target="_blank" rel="noopener noreferrer">yxa</a> را
 مشاهده می‌کنید.</p>
 <div style="text-align:center"><p><img decoding="async" loading="lazy" alt="Bad RTP Media Engine" src="https://alishir.github.io/assets/images/yxa-sup-b84b907b509c5f59307413d1e4b6dade.png" class="img_MQSz"></p></div>
@@ -97,6 +99,7 @@
         <category label="Erlang" term="Erlang"/>
         <category label="BEAM" term="BEAM"/>
         <category label="Telecom" term="Telecom"/>
+        <category label="Supevision Tree" term="Supevision Tree"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[الیکسیر برای پروژه‌های مخابراتی]]></title>
@@ -336,6 +339,28 @@ Binary-Coded Decimal یا به اختصار TBCD است. این روش برای 
         <category label="Structured Concurrency" term="Structured Concurrency"/>
     </entry>
     <entry>
+        <title type="html"><![CDATA[معماری NFV]]></title>
+        <id>https://alishir.github.io/NFV-Architecture</id>
+        <link href="https://alishir.github.io/NFV-Architecture"/>
+        <updated>2024-10-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[امروز [این]]></summary>
+        <content type="html"><![CDATA[<p>امروز <a href="https://www.etsi.org/images/articles/NFV_Architecture.svg" target="_blank" rel="noopener noreferrer" title="NFV
+Architecture">این
+فایل</a> با فرمت <code>SVG</code> که بیانگر معماری NFV هست دیدم، صرفا برای
+ارجاعات بعدی اینجا هم قرارش میدم. جا داره که از آقای <a href="https://www.linkedin.com/in/laurent-vreck-560174/" target="_blank" rel="noopener noreferrer" title="Laurent
+Vreck LinkedIn Profile">Laurent
+Vreck</a> بابت این فایل کاربردی تشکر کنم. یکی از مزایای
+این فایل لینک‌هایی هست که در هر قسمت به مستندات مربوطه قرار داده شده.</p>
+<p><img decoding="async" loading="lazy" alt="NFV Architecture" src="https://alishir.github.io/assets/images/NFV_Architecture-dbb8237de9059fa857c08923dda30620.svg" class="img_MQSz"></p>]]></content>
+        <author>
+            <name>علی</name>
+            <uri>https://www.linkedin.com/in/ali-shirvani-37a031191/</uri>
+        </author>
+        <category label="NFV" term="NFV"/>
+        <category label="ETSI" term="ETSI"/>
+        <category label="معماری" term="معماری"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[ظرائف استفاده از cloud-init]]></title>
         <id>https://alishir.github.io/cloud-init</id>
         <link href="https://alishir.github.io/cloud-init"/>
@@ -375,27 +400,5 @@ site">اینجا</a> نسخه سیستم عامل را انتخاب می‌کن�
         <category label="مجازی‌سازی" term="مجازی‌سازی"/>
         <category label="qemu" term="qemu"/>
         <category label="cloud-init" term="cloud-init"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[معماری NFV]]></title>
-        <id>https://alishir.github.io/NFV-Architecture</id>
-        <link href="https://alishir.github.io/NFV-Architecture"/>
-        <updated>2024-10-23T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[امروز [این]]></summary>
-        <content type="html"><![CDATA[<p>امروز <a href="https://www.etsi.org/images/articles/NFV_Architecture.svg" target="_blank" rel="noopener noreferrer" title="NFV
-Architecture">این
-فایل</a> با فرمت <code>SVG</code> که بیانگر معماری NFV هست دیدم، صرفا برای
-ارجاعات بعدی اینجا هم قرارش میدم. جا داره که از آقای <a href="https://www.linkedin.com/in/laurent-vreck-560174/" target="_blank" rel="noopener noreferrer" title="Laurent
-Vreck LinkedIn Profile">Laurent
-Vreck</a> بابت این فایل کاربردی تشکر کنم. یکی از مزایای
-این فایل لینک‌هایی هست که در هر قسمت به مستندات مربوطه قرار داده شده.</p>
-<p><img decoding="async" loading="lazy" alt="NFV Architecture" src="https://alishir.github.io/assets/images/NFV_Architecture-dbb8237de9059fa857c08923dda30620.svg" class="img_MQSz"></p>]]></content>
-        <author>
-            <name>علی</name>
-            <uri>https://www.linkedin.com/in/ali-shirvani-37a031191/</uri>
-        </author>
-        <category label="NFV" term="NFV"/>
-        <category label="ETSI" term="ETSI"/>
-        <category label="معماری" term="معماری"/>
     </entry>
 </feed>
