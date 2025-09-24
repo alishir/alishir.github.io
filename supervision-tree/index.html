@@ -12,8 +12,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/css/styles.73e6790f.css">
-<script src="/assets/js/runtime~main.01baa0b5.js" defer="defer"></script>
-<script src="/assets/js/main.bda52b97.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.b6c2bc3c.js" defer="defer"></script>
+<script src="/assets/js/main.a8d82e8b.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
@@ -27,10 +27,10 @@
 زیرساختِ اجرای همروند انبوهی از پردازه‌ها را فراهم می‌کند و از طریق آن
 می‌توان دامنه انتشار خطا را محدود کرد. اما برای ارائه عملکرد قابل قبول
 در مواجهه با خطا، نیاز به نظارت، تشخیص سریع خطا و راه‌ اندازی مجدد
-پردازه مربوطه است. در این نوشته به معرفی درخت نظارت، که در واقع تکمیل
-کننده رویکرد ارلنگ برا ی توسعه سیستم‌های پایدار در مواجهه با خطا است،
+پردازه مربوطه است. در این نوشته به معرفی درخت نظارت<sup><a href="#user-content-fn-1-95bd1a" id="user-content-fnref-1-95bd1a" data-footnote-ref="true" aria-describedby="footnote-label">1</a></sup>، که در واقع تکمیل
+کننده رویکرد ارلنگ برای توسعه سیستم‌های پایدار در مواجهه با خطا است،
 می‌پردازیم.</p>
-<p>شرکت فرضی زوتِل<sup><a href="#user-content-fn-1-95bd1a" id="user-content-fnref-1-95bd1a" data-footnote-ref="true" aria-describedby="footnote-label">1</a></sup> را در نظر بگیرد که به ارائه خدمات مخابراتی در باغ
+<p>شرکت فرضی زوتِل<sup><a href="#user-content-fn-2-95bd1a" id="user-content-fnref-2-95bd1a" data-footnote-ref="true" aria-describedby="footnote-label">2</a></sup> را در نظر بگیرد که به ارائه خدمات مخابراتی در باغ
 وحش‌های جهان مشغول است. جهت کنترل بیشتر روی تماس‌ها، این شرکت از یک هسته
 مرکزی برای تبادل بسته‌های صوتیِ هر تماس استفاده می‌کند. همان‌طور که در شکل
 زیر نمایش داده شده، تمام بسته‌های RTP مربوط به تماس‌ها از این هسته
@@ -38,12 +38,12 @@
 <div style="text-align:center"><p><img decoding="async" loading="lazy" alt="ZooTel Media Engine" src="/assets/images/zootel-single-process-acaab56f0f2179e0930fbfcb5333cce3.svg" class="img_MQSz"></p></div>
 <p>به خاطر پراکندگی حیوانات در کشورهای مختلف، این شرکت با تنوع بسیار
 بالایی از گوشی‌ها مواجه است. این تنوع بالا می‌تواند چالش‌های بسیاری هم در
-حوزه سیگنال‌دهی<sup><a href="#user-content-fn-2-95bd1a" id="user-content-fnref-2-95bd1a" data-footnote-ref="true" aria-describedby="footnote-label">2</a></sup>، مشابه آنچه در <a href="https://alishir.github.io/why-we-chose-elixir-for-telecom-projects" target="_blank" rel="noopener noreferrer">نوشته
+حوزه سیگنال‌دهی<sup><a href="#user-content-fn-3-95bd1a" id="user-content-fnref-3-95bd1a" data-footnote-ref="true" aria-describedby="footnote-label">3</a></sup>، مشابه آنچه در <a href="https://alishir.github.io/why-we-chose-elixir-for-telecom-projects" target="_blank" rel="noopener noreferrer">نوشته
 پیشین</a>
 ذکر شد، و هم در حوزه تبادل بسته‌های صوتی، مشابه بسته‌های مرموز RTP که در
 <a href="https://nickvsnetworking.com/tales-from-the-trenches-samsung-mystery-packet-on-ims-call/" target="_blank" rel="noopener noreferrer">این
 نوشته</a>
-به آن‌ها اشاره شده، برای ش رکت زوتل ایجاد کند. حتی اگر در هسته مرکزی
+به آن‌ها اشاره شده، برای شرکت زوتل ایجاد کند. حتی اگر در هسته مرکزی
 تمام حالات محتمل که منجر به خطا می‌شوند، بررسی شده باشد، باز هم به دلیل
 استفاده از کتابخانه‌های دیگر امکان مختل شدن فعالیت هسته مرکزی و از دست
 رفتن تمامی تماس‌ها وجود دارد، مشابه آنچه در <a href="https://github.com/sipwise/rtpengine/issues/1817" target="_blank" rel="noopener noreferrer">این
@@ -57,7 +57,7 @@
 <div style="text-align:center"><p><img decoding="async" loading="lazy" alt="Bad RTP Media Engine" src="/assets/images/zootel-erlang-process-c04d56bda13f875c192e924788797453.svg" class="img_MQSz"></p></div>
 <p>با توجه به اینکه هر پردازه مسئول انتقال بسته‌ها در یک تماس است، دریافت
 بسته‌های مرموز تنها عملکرد یک پردازه را مختل می‌کند و عملا تنها یک تماس
-را از دست می‌دهیم، بر خلاف حالت قبل که کل تماس‌ها از دست می‌رفت.</p>
+را از دست می‌دهیم، بر خلاف حالت قبل که کل تما س‌ها از دست می‌رفت.</p>
 <div style="text-align:center"><p><img decoding="async" loading="lazy" alt="Bad RTP Media Engine" src="/assets/images/bad-rtp-erlang-process-1413709aee020c13eaea5fff65592a7e.svg" class="img_MQSz"></p></div>
 <p>با این وجود از دست دادن کامل یک تماس نیز مطلوب نیست. بهتر است که تنها
 شاهد یک اختلال جزئی در انتقال پیام‌های صوتی باشیم. برای رسیدن به این
@@ -77,7 +77,7 @@
 می‌تواند توسط یک پردازه نظارت شود. در واقع این ویژگی ساده امکان تعریف
 درخت نظارت را ایجاد می‌کند. از طریق درخت نظارت می‌توان مسائل پیچیده‌ را
 به صورت پردازه‌هایی ساده در یک درخت نظارت مدل‌سازی کرد. به عنوان نمونه
-در شکل زیر درخت نظارت مربوط به پشته<sup><a href="#user-content-fn-3-95bd1a" id="user-content-fnref-3-95bd1a" data-footnote-ref="true" aria-describedby="footnote-label">3</a></sup> SIP پروژه
+در شکل زیر درخت نظارت مربوط به پشته<sup><a href="#user-content-fn-4-95bd1a" id="user-content-fnref-4-95bd1a" data-footnote-ref="true" aria-describedby="footnote-label">4</a></sup> SIP پروژه
 <a href="https://www.stacken.kth.se/project/yxa/architecture.html" target="_blank" rel="noopener noreferrer">yxa</a> را
 مشاهده می‌کنید.</p>
 <div style="text-align:center"><p><img decoding="async" loading="lazy" alt="Bad RTP Media Engine" src="/assets/images/yxa-sup-b84b907b509c5f59307413d1e4b6dade.png" class="img_MQSz"></p></div>
@@ -87,13 +87,16 @@
 <section data-footnotes="true" class="footnotes"><h2 class="anchor anchorWithStickyNavbar_tMk3 sr-only" id="footnote-label">پاورقی‌ها<a href="#footnote-label" class="hash-link" aria-label="لینک مستقیم به پاورقی‌ها" title="لینک مستقیم به پاورقی‌ها">​</a></h2>
 <ol>
 <li id="user-content-fn-1-95bd1a">
-<p>ZooTel <a href="#user-content-fnref-1-95bd1a" data-footnote-backref="" aria-label="Back to reference 1" class="data-footnote-backref">↩</a></p>
+<p>Supervision Tree <a href="#user-content-fnref-1-95bd1a" data-footnote-backref="" aria-label="Back to reference 1" class="data-footnote-backref">↩</a></p>
 </li>
 <li id="user-content-fn-2-95bd1a">
-<p>Signaling <a href="#user-content-fnref-2-95bd1a" data-footnote-backref="" aria-label="Back to reference 2" class="data-footnote-backref">↩</a></p>
+<p>ZooTel <a href="#user-content-fnref-2-95bd1a" data-footnote-backref="" aria-label="Back to reference 2" class="data-footnote-backref">↩</a></p>
 </li>
 <li id="user-content-fn-3-95bd1a">
-<p>Stack <a href="#user-content-fnref-3-95bd1a" data-footnote-backref="" aria-label="Back to reference 3" class="data-footnote-backref">↩</a></p>
+<p>Signaling <a href="#user-content-fnref-3-95bd1a" data-footnote-backref="" aria-label="Back to reference 3" class="data-footnote-backref">↩</a></p>
+</li>
+<li id="user-content-fn-4-95bd1a">
+<p>Stack <a href="#user-content-fnref-4-95bd1a" data-footnote-backref="" aria-label="Back to reference 4" class="data-footnote-backref">↩</a></p>
 </li>
 </ol>
 </section></div><footer class="docusaurus-mt-lg"><div class="row margin-top--sm theme-blog-footer-edit-meta-row"><div class="col"><b>برچسب‌ها:</b><ul class="tags_CjTj padding--none margin-left--sm"><li class="tag_UdQf"><a rel="tag" class="tag_bELe tagRegular_rz1J" href="/tags/elixir">Elixir</a></li><li class="tag_UdQf"><a rel="tag" class="tag_bELe tagRegular_rz1J" href="/tags/erlang">Erlang</a></li><li class="tag_UdQf"><a rel="tag" class="tag_bELe tagRegular_rz1J" href="/tags/beam">BEAM</a></li><li class="tag_UdQf"><a rel="tag" class="tag_bELe tagRegular_rz1J" href="/tags/telecom">Telecom</a></li><li class="tag_UdQf"><a rel="tag" class="tag_bELe tagRegular_rz1J" href="/tags/supevision-tree">Supevision Tree</a></li></ul></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="کنترل پست‌های صفحه وبلاگ"><a class="pagination-nav__link pagination-nav__link--next" href="/why-we-chose-elixir-for-telecom-projects"><div class="pagination-nav__sublabel">پست قدیمی‌تر</div><div class="pagination-nav__label">الیکسیر برای پروژه‌های مخابراتی</div></a></nav></main></div></div></div></div>
